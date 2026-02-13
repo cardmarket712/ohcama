@@ -270,16 +270,16 @@
       height:20px;
     }
     .btn.icon-btn .sun-icon{
-      display:block;
+      display:none; /* Hide sun icon by default (for light mode, button should show moon) */
     }
     .btn.icon-btn .moon-icon{
-      display:none;
+      display:block; /* Show moon icon by default (for light mode, button should show moon) */
     }
     html[data-theme='dark'] .btn.icon-btn .sun-icon{
-      display:none;
+      display:block; /* Show sun icon when in dark mode (to switch to light) */
     }
     html[data-theme='dark'] .btn.icon-btn .moon-icon{
-      display:block;
+      display:none; /* Hide moon icon when in dark mode (button should show sun) */
     }
 
     /* Filters */

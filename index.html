@@ -11,6 +11,193 @@
       --radius:16px; --focus:0 0 0 4px rgba(37,99,235,.18);
       --ok:#16A34A; --warn:#F59E0B; --danger:#DC2626;
       --max:1100px;
+
+      /* Dark mode variables */
+      --dark-bg: #1A202C;
+      --dark-card: #2D3748;
+      --dark-text: #E2E8F0;
+      --dark-muted: #A0AEC0;
+      --dark-line: #4A5568;
+      --dark-chip: #2C5282;
+      --dark-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      --dark-header-bg: rgba(26, 32, 44, 0.78);
+      --dark-card-hover-bg: #4A5568;
+      --dark-input-bg: rgba(45, 55, 72, 0.86);
+      --dark-modal-bg: #2D3748;
+      --dark-modal-header-bg: linear-gradient(180deg, rgba(37,99,235,.16), rgba(45,55,72,1));
+      --dark-modal-footer-bg: rgba(45, 55, 72, 0.75);
+      --dark-panel-bg: rgba(45, 55, 72, 0.70);
+      --dark-table-bg: #2D3748;
+      --dark-table-th-bg: rgba(37,99,235,.15);
+      --dark-pill-bg: rgba(226, 232, 240, 0.08);
+    }
+    
+    html[data-theme='dark'] {
+      --bg: var(--dark-bg);
+      --card: var(--dark-card);
+      --text: var(--dark-text);
+      --muted: var(--dark-muted);
+      --line: var(--dark-line);
+      --chip: var(--dark-chip);
+      --shadow: var(--dark-shadow);
+    }
+    html[data-theme='dark'] .header {
+      background: var(--dark-header-bg);
+      border-bottom-color: var(--dark-line);
+    }
+    html[data-theme='dark'] .searchbox input {
+      background: var(--dark-input-bg);
+      border-color: var(--dark-line);
+      color: var(--dark-text);
+    }
+    html[data-theme='dark'] .searchbox input:focus {
+      background: var(--dark-card);
+    }
+    html[data-theme='dark'] .btn {
+      background: var(--dark-card);
+      border-color: var(--dark-line);
+      color: var(--dark-text);
+    }
+    html[data-theme='dark'] .btn:hover {
+      background: var(--dark-card-hover-bg);
+      border-color: rgba(37,99,235,.55);
+    }
+    html[data-theme='dark'] .btn.secondary {
+      color: var(--dark-muted);
+    }
+    html[data-theme='dark'] .btn.primary {
+      background: rgba(37,99,235,.2);
+      border-color: rgba(37,99,235,.5);
+      color: var(--blue);
+    }
+    html[data-theme='dark'] .chip {
+      background: var(--dark-card);
+      border-color: var(--dark-line);
+      color: var(--dark-text);
+    }
+    html[data-theme='dark'] .chip:hover {
+      background: var(--dark-card-hover-bg);
+      border-color: rgba(37,99,235,.55);
+    }
+    html[data-theme='dark'] .chip[aria-pressed="true"] {
+      background: var(--dark-chip);
+      border-color: rgba(37,99,235,.75);
+      color: var(--dark-text);
+    }
+    html[data-theme='dark'] .card {
+      background: var(--dark-card);
+      border-color: var(--dark-line);
+    }
+    html[data-theme='dark'] .card:hover {
+      background: var(--dark-card-hover-bg);
+      border-color: rgba(37,99,235,.55);
+    }
+    html[data-theme='dark'] .logo {
+      background: var(--dark-card-hover-bg);
+      border-color: var(--dark-line);
+    }
+    html[data-theme='dark'] .logo-fallback {
+      background: linear-gradient(135deg, #A0AEC0, #CBD5E0);
+      border-color: var(--dark-line);
+    }
+    html[data-theme='dark'] .pill {
+      background: var(--dark-pill-bg);
+      border-color: var(--dark-line);
+      color: var(--dark-text);
+    }
+    html[data-theme='dark'] .badge-cat {
+      border-color: var(--dark-line);
+    }
+    html[data-theme='dark'] .card-actions {
+      border-top-color: var(--dark-line);
+      background: linear-gradient(180deg, rgba(26, 32, 44, 0.0), rgba(26, 32, 44, 0.7));
+    }
+    html[data-theme='dark'] .btn-sq {
+      background: rgba(37,99,235,.2);
+      border-color: rgba(37,99,235,.5);
+      color: var(--blue);
+    }
+    html[data-theme='dark'] .btn-sq:hover {
+      background: rgba(37,99,235,.3);
+      border-color: rgba(37,99,235,.7);
+    }
+    html[data-theme='dark'] .btn-sq.ghost {
+      border-color: var(--dark-line);
+      background: var(--dark-card);
+      color: var(--dark-text);
+    }
+    html[data-theme='dark'] .btn-sq.ghost:hover {
+      border-color: rgba(37,99,235,.55);
+    }
+    html[data-theme='dark'] .empty {
+      background: var(--dark-card);
+      border-color: var(--dark-line);
+    }
+    html[data-theme='dark'] .backdrop {
+      background: rgba(0, 0, 0, 0.75);
+    }
+    html[data-theme='dark'] .modal {
+      background: var(--dark-modal-bg);
+      border-color: var(--dark-line);
+    }
+    html[data-theme='dark'] .modal-header {
+      border-bottom-color: var(--dark-line);
+      background: var(--dark-modal-header-bg);
+    }
+    html[data-theme='dark'] .close {
+      background: var(--dark-card);
+      border-color: var(--dark-line);
+      color: var(--dark-text);
+    }
+    html[data-theme='dark'] .modal-body p {
+      color: var(--dark-text);
+    }
+    html[data-theme='dark'] .modal-body ul {
+      color: var(--dark-text);
+    }
+    html[data-theme='dark'] .modal-footer {
+      border-top-color: var(--dark-line);
+      background: var(--dark-modal-footer-bg);
+    }
+    html[data-theme='dark'] .panel {
+      border-color: var(--dark-line);
+      background: var(--dark-panel-bg);
+    }
+    html[data-theme='dark'] .table {
+      border-color: var(--dark-line);
+      background: var(--dark-table-bg);
+    }
+    html[data-theme='dark'] .table th, html[data-theme='dark'] .table td {
+      border-bottom-color: var(--dark-line);
+      color: var(--dark-text);
+    }
+    html[data-theme='dark'] .table th {
+      background: var(--dark-table-th-bg);
+      color: var(--dark-text);
+    }
+    html[data-theme='dark'] .field label {
+      color: var(--dark-text);
+    }
+    html[data-theme='dark'] .field input, html[data-theme='dark'] .field select, html[data-theme='dark'] .field textarea {
+      border-color: var(--dark-line);
+      background: var(--dark-card);
+      color: var(--dark-text);
+    }
+    html[data-theme='dark'] .mini {
+      border-color: var(--dark-line);
+      background: var(--dark-card);
+      color: var(--dark-text);
+    }
+    html[data-theme='dark'] .mini:hover {
+      border-color: rgba(37,99,235,.55);
+    }
+    html[data-theme='dark'] .mini.danger {
+      border-color: rgba(220,38,38,.55);
+      color: #F87171;
+      background: rgba(220,38,38,.1);
+    }
+    html[data-theme='dark'] .mini.danger:hover {
+      border-color: rgba(220,38,38,.75);
     }
     *{box-sizing:border-box}
     html,body{height:100%}
@@ -297,6 +484,7 @@
             </svg>
             <input id="searchInput" type="search" placeholder="이벤트 제목/혜택 내용 검색" autocomplete="off" />
           </div>
+          <button id="themeToggleBtn" class="btn" type="button">다크 모드</button>
           <button id="resetBtn" class="btn secondary" type="button">초기화</button>
           <button id="adminBtn" class="btn primary" type="button">관리자</button>
         </div>
@@ -1034,8 +1222,52 @@
     openAdmin();
   });
 
+
+  // =========================
+  // Theme Toggle
+  // =========================
+  const themeToggleBtn = document.getElementById("themeToggleBtn");
+  const LOCAL_STORAGE_THEME_KEY = "theme";
+
+  function saveTheme(theme) {
+    localStorage.setItem(LOCAL_STORAGE_THEME_KEY, theme);
+  }
+
+  function getSavedTheme() {
+    return localStorage.getItem(LOCAL_STORAGE_THEME_KEY);
+  }
+
+  function applyTheme(theme) {
+    document.documentElement.setAttribute("data-theme", theme);
+    themeToggleBtn.textContent = theme === "dark" ? "라이트 모드" : "다크 모드";
+  }
+
+  function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute("data-theme");
+    const newTheme = currentTheme === "dark" ? "light" : "dark";
+    applyTheme(newTheme);
+    saveTheme(newTheme);
+  }
+
+  function applySavedTheme() {
+    const savedTheme = getSavedTheme();
+    if (savedTheme) {
+      applyTheme(savedTheme);
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      // Default to dark mode if system preference is dark
+      applyTheme('dark');
+      saveTheme('dark');
+    } else {
+      applyTheme('light');
+      saveTheme('light');
+    }
+  }
+
+  themeToggleBtn.addEventListener("click", toggleTheme);
+
   // Initial
   (async function init(){
+    applySavedTheme(); // Apply saved theme or system preference
     setPressed("issuer", "ALL");
     setPressed("category", "ALL");
     await refresh();
